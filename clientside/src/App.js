@@ -1,14 +1,14 @@
 import "./App.css";
+import Music from "./components/Music";
 
 function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
       <h1>Ricky1</h1>
+      <Music />
     </div>
   );
 }
-
-<h1>"Well hello there" -Obi (Kali)</h1>
 
 export default App;
