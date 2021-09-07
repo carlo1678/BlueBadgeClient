@@ -7,3 +7,35 @@
   padding: 10px;
   color: #00a8a8;
 }
+
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.initialSearch {
+  top: 0;
+  margin-left: 350px;
+  transition: 1s;
+  font-size: 1rem;
+  color: blue;
+  border-width: 3px;
+  border-image: linear-gradient(to right, blue, green);
+  border-image-slice: 1;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.initialSearch {
+  display: flex;
+  justify-content: center;
+}
+.buttonSearch {
+  margin-top: 20px;
+}
+.movieCards {
+  margin-top: 7vh;
+
+  display: inline-table;
+  justify-content: center;
+}

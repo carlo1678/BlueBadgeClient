@@ -36,12 +36,13 @@ export default function Search() {
         value={userInput}
         onChange={changeInput}
       ></input>
-      <button onClick={() => getMovies()}>Search!</button>
-      <button onClick={resetForm}>Clear!</button>
+      <button type="submit" id="buttonSearch" onClick={() => getMovies()}>Search!</button>
+      <button id="buttonClear" onClick={resetForm}>Clear!</button>
       <div className="movieCards">
         {movies.map((movie) => (
           <Movies Title={movie.Title} Poster={movie.Poster} />
         ))}
+        
       </div>
     </div>
   );
