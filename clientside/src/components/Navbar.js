@@ -8,7 +8,7 @@ export default function NavBar() {
     <div>
       <Navbar className="navbar-primary" variant="dark">
         <Navbar.Brand className="homeTitle" href="/">
-          <span className="commerce">E-Commerce</span>
+          <span className="commerce">Blue Badge Project</span>
         </Navbar.Brand>
         <Nav className="mr-auto">
           <Link className="navlinks" to="/">
@@ -19,6 +19,9 @@ export default function NavBar() {
           </Link>
           <Link className="navlinks" to="/games">
             Games
+          </Link>
+          <Link className="navlinks" to="/music">
+            Music
           </Link>
         </Nav>
       </Navbar>
