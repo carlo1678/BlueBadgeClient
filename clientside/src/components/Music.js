@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // fetch(`https://shazam.p.rapidapi.com/search?term=${userInput}&locale=en-US&offset=0`, {
 //   "method": "GET",
 //   "headers": {
@@ -21,4 +22,12 @@ export default function Music(props) {
   return <div>
     <p className="Title">{props.Title}</p>
   </div>;
+
+export default function Music() {
+  return (
+    <div>
+      <h1>Music Page!</h1>
+    </div>
+  );
+
 }
