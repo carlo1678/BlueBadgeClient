@@ -14,7 +14,7 @@ export default function Search() {
       }
     );
     const json = await response.json();
-
+    console.log(json);
     setMovies(json.Search);
   };
 
@@ -40,7 +40,7 @@ export default function Search() {
       <button onClick={resetForm}>Clear!</button>
       <div className="movieCards">
         {movies.map((movie) => (
-          <Movies Title={movie.Title} Poster={movie.Poster} />
+          <Movies Title={movie.Title} Poster={movie.Poster} Year={movie.Year} />
         ))}
       </div>
     </div>

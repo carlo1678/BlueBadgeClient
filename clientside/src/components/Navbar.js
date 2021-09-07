@@ -23,6 +23,9 @@ export default function NavBar() {
           <Link className="navlinks" to="/music">
             Music
           </Link>
+          <Link className="favorites" to="/favorites">
+            Favorites
+          </Link>
         </Nav>
       </Navbar>
     </div>
