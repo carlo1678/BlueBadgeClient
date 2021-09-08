@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Music from "./Music";
 
-export default function MusicSearch() {
+export default function MusicSearch(props) {
   const [songs, setSongs] = useState([]);
   const [userInput, setUserInput] = useState("");
 
@@ -20,21 +20,8 @@ export default function MusicSearch() {
     );
     const json = await response.json();
     console.log(json.artists.hits);
-    setSongs(
-      json.artists.hits.forEach((element) => {
-        console.log(element.artist.name);
-        let div = document.createElement("div");
-        let songPic = document.createElement("img");
-        songPic.src = element.artist.avatar;
-        let artistName = document.createElement("p");
-        artistName.innerHTML = element.artist.name;
-        let body = document.querySelector("body");
-        body.append(div);
-        div.appendChild(songPic);
-        div.appendChild(artistName);
-      })
-    );
-    // setSongs(json.Search);
+
+    setSongs(json.artists.hits);
   };
 
   const changeInput = (event) => {
@@ -52,11 +39,15 @@ export default function MusicSearch() {
         onChange={changeInput}
       ></input>
       <button onClick={() => getMusic()}>Search</button>
-      {/* <div className="musicCards">
+      <div className="musicCards">
         {songs.map((song) => (
-          <Music Image={song.artist.avatar} Name={song.artist.name} />
+          <Music
+            sessionToken={props.sessionToken}
+            Image={song.artist.avatar}
+            Name={song.artist.name}
+          />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }

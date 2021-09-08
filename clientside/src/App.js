@@ -1,41 +1,40 @@
 import "./App.css";
-import Games from "./components/Games";
-import MoviesSearch from "./components/MoviesSearch";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/Navbar";
-import LandingPage from "./components/LandingPage";
-import Signup from "./components/Signup";
 import Login from "./components/Login";
-import MusicSearch from "./components/MusicSearch";
+import LandingPage from "./components/LandingPage";
+import Auth from "./components/Auth";
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
-          <Route exact path="/signup">
-            <Signup />
-          </Route>
-          <Route exact path="/home">
-            <LandingPage />
-          </Route>
-          <Route exact path="/games">
-            <Games />
-          </Route>
-          <Route exact path="/movies">
-            <MoviesSearch />
-          </Route>
-          <Route exact path="/music">
-            <MusicSearch />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
+  const [sessionToken, setSessionToken] = useState("");
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      setSessionToken(localStorage.getItem("token"));
+    }
+  }, []);
+
+  const updateToken = (newToken) => {
+    localStorage.setItem("token", newToken);
+    setSessionToken(newToken);
+  };
+
+  const clearToken = () => {
+    localStorage.clear();
+    setSessionToken("");
+  };
+
+  const protectedViews = () => {
+    return sessionToken === localStorage.getItem("token") ? (
+      <div>
+        <NavBar clearToken={clearToken} sessionToken={sessionToken} />
+        {/* <LandingPage /> */}
+      </div>
+    ) : (
+      <Auth updateToken={updateToken} />
+    );
+  };
+  return <div className="App">{protectedViews()}</div>;
 }
 
 export default App;

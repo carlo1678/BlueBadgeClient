@@ -2,8 +2,15 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LandingPage from "./LandingPage";
+import Signup from "./Signup";
+import Login from "./Login";
+import MusicSearch from "./MusicSearch";
+import Games from "./Games";
+import MoviesSearch from "./MoviesSearch";
 
-export default function NavBar() {
+export default function NavBar(props) {
   return (
     <div>
       <Navbar className="navbar-primary" variant="dark">
@@ -26,8 +33,27 @@ export default function NavBar() {
           <Link className="favorites" to="/favorites">
             Favorites
           </Link>
+          {props.sessionToken && (
+            <button onClick={props.clearToken} className="navlinks">
+              Logout
+            </button>
+          )}
         </Nav>
       </Navbar>
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route exact path="/games">
+          <Games sessionToken={props.sessionToken} />
+        </Route>
+        <Route exact path="/movies">
+          <MoviesSearch sessionToken={props.sessionToken} />
+        </Route>
+        <Route exact path="/music">
+          <MusicSearch sessionToken={props.sessionToken} />
+        </Route>
+      </Switch>
     </div>
   );
 }
