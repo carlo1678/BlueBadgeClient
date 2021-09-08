@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 // import React from "react";
+=======
+import { response } from "express";
+import React from "react";
+import { useState, useEffect } from "react";
+>>>>>>> 72eb737c5a77e8e5417a807c91581c894d3b52ab
 
 
 // fetch(`https://shazam.p.rapidapi.com/search?term=${userInput}&locale=en-US&offset=0`, {
@@ -18,10 +24,47 @@
 //     console.error(err);
 //   });
 
+<<<<<<< HEAD
 // export default function Music(props) {
 //   return <div>
 //     <p className="Title">{props.Title}</p>
 //   </div>;
+=======
+export default function Music(props) {
+  let songInfo = {
+    song: {
+      title: props.Title,
+      coverArt: props.art,
+    },
+  };
+
+  const addToFavorites = (e) => {
+    const accessToken = localStorage.getItem('SessionToken');
+    e.preventDefault();
+    fetch(`http://localhost:2001/music/add`, {
+      method: 'POST',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken}`,
+      }),
+      body: JSON.stringify(songInfo),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        alert("Successfully added to favorites!");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  return <div>
+    <p className="Title">{props.Title}</p>
+    <p className="art">{props.art}</p>
+    <button onClick={addToFavorites}>Add to Favorites!</button>
+  </div>;
+>>>>>>> 72eb737c5a77e8e5417a807c91581c894d3b52ab
 
 // export default function Music() {
 //   return (
