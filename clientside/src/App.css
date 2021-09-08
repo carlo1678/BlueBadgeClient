@@ -15,7 +15,7 @@ h3 {
 
 .initialSearch {
   top: 0;
-  margin-left: 350px;
+  margin-left: 450px;
   transition: 1s;
   font-size: 1rem;
   color: blue;
@@ -26,16 +26,18 @@ h3 {
   width: 50%;
   padding: 5px;
 }
-.initialSearch {
-  display: flex;
-  justify-content: center;
-}
+
 .buttonSearch {
   margin-top: 20px;
 }
 .movieCards {
-  margin-top: 7vh;
+  margin-top: 100px;
+  margin-left: 800px;
+}
 
-  display: inline-table;
-  justify-content: center;
+.favorites {
+  font-size: 20px;
+  padding: 10px;
+  color: #00a8a8;
+  margin-left: 1300px;
 }
