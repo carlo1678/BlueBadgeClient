@@ -2,6 +2,7 @@ import { response } from "express";
 import React from "react";
 import { useState, useEffect } from "react";
 
+
 // fetch(`https://shazam.p.rapidapi.com/search?term=${userInput}&locale=en-US&offset=0`, {
 //   "method": "GET",
 //   "headers": {
@@ -53,4 +54,12 @@ export default function Music(props) {
     <p className="art">{props.art}</p>
     <button onClick={addToFavorites}>Add to Favorites!</button>
   </div>;
+
+export default function Music() {
+  return (
+    <div>
+      <h1>Music Page!</h1>
+    </div>
+  );
+
 }
