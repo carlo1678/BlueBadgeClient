@@ -6,7 +6,7 @@ import NavBar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import Music from "./components/Music";
+import MusicSearch from "./components/MusicSearch";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
             <MoviesSearch />
           </Route>
           <Route exact path="/music">
-            <Music />
+            <MusicSearch />
           </Route>
         </Switch>
       </Router>
