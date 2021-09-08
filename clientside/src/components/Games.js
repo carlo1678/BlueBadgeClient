@@ -36,7 +36,7 @@ export default function Games(props) {
       <button onClick={addToFavorites}>Add to Favorites!!</button>
     </div>
   );
-}
+
 
 // const apiUrl =
 //   "https://api.rawg.io/api/games?key=a72ffc12a8ee4b4794a587d33e30142d";

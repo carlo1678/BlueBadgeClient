@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Movies from "./Movies";
 
-export default function Search() {
+export default function Search(props) {
   const [movies, setMovies] = useState([]);
   const [userInput, setUserInput] = useState("");
 
@@ -40,7 +40,12 @@ export default function Search() {
       <button onClick={resetForm}>Clear!</button>
       <div className="movieCards">
         {movies.map((movie) => (
-          <Movies Title={movie.Title} Poster={movie.Poster} Year={movie.Year} />
+          <Movies
+            sessionToken={props.sessionToken}
+            Title={movie.Title}
+            Poster={movie.Poster}
+            Year={movie.Year}
+          />
         ))}
       </div>
     </div>
