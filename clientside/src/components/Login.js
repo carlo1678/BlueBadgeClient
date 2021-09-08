@@ -44,8 +44,8 @@ export default function Login(props) {
   };
 
   return (
-    <div>
-      <h1>Login Here!</h1>
+    <div className='loginAll' id='loginAll'>
+      <h1 className='loginHere'>Login Here!</h1>
       <Form onSubmit={userLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -66,7 +66,7 @@ export default function Login(props) {
             placeholder="Password"
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className='loginButton'>
           Submit
         </Button>
       </Form>

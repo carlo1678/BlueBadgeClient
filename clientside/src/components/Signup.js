@@ -37,9 +37,9 @@ export default function Signup(props) {
   };
 
   return (
-    <div>
-      <h1>Register for an account here!</h1>
-      <Form onSubmit={userSignUp}>
+    <div className='registerAll' id='registerAll'>
+      <h1 className='register'>Register here!</h1>
+      <Form onSubmit={userSignUp} >
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -62,7 +62,7 @@ export default function Signup(props) {
             placeholder="Password"
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className='regButton'>
           Submit
         </Button>
       </Form>
