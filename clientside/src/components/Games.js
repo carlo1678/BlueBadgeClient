@@ -33,7 +33,7 @@ export default function Games(props) {
     <div>
       <p className="title">{props.name}</p>
       <p className="image">{props.image}</p>
-      <button onClick={addToFavorites}>Add to Favorites!</button>
+      <button onClick={addToFavorites}>Add to Favorites!!</button>
     </div>
   );
 }
