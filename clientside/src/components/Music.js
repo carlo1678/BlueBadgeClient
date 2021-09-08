@@ -55,11 +55,10 @@ export default function Music(props) {
     <button onClick={addToFavorites}>Add to Favorites!</button>
   </div>;
 
-export default function Music() {
-  return (
-    <div>
-      <h1>Music Page!</h1>
-    </div>
-  );
-
-}
+  export default function Music() {
+    return (
+      <div>
+        <h1>Music Page!</h1>
+      </div>
+    );
+  };
