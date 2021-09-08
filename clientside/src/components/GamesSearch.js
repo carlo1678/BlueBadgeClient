@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Games from "./Games";
 
-export default function GamesSearch() {
+export default function GamesSearch(props) {
   const [games, setGames] = useState([]);
   const [userInput, setUserInput] = useState("");
 
@@ -27,15 +27,19 @@ export default function GamesSearch() {
         <h3 className="searchHeading">Search by Game Title!</h3>
         <input
           className="initialSearch"
-          placeholder="Song Title"
+          placeholder="Game Title"
           type="text"
           value={userInput}
           onChange={changeInput}
         ></input>
-        <button onClick={getGames()}>Search</button>
+        <button onClick={() => getGames()}>Search</button>
         <div className="musicCards">
           {games.map((game) => (
-            <Games Image={game.background_image} Name={game.name} />
+            <Games
+              sessionToken={props.sessionToken}
+              Image={game.background_image}
+              Name={game.name}
+            />
           ))}
         </div>
       </div>

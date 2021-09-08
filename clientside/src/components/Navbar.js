@@ -9,6 +9,7 @@ import Login from "./Login";
 import MusicSearch from "./MusicSearch";
 import Games from "./Games";
 import MoviesSearch from "./MoviesSearch";
+import GamesSearch from "./GamesSearch";
 
 export default function NavBar(props) {
   return (
@@ -45,7 +46,7 @@ export default function NavBar(props) {
           <LandingPage />
         </Route>
         <Route exact path="/games">
-          <Games sessionToken={props.sessionToken} />
+          <GamesSearch sessionToken={props.sessionToken} />
         </Route>
         <Route exact path="/movies">
           <MoviesSearch sessionToken={props.sessionToken} />
