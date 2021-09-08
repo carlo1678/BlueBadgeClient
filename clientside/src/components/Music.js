@@ -28,7 +28,6 @@ export default function Music(props) {
         console.error(err);
       });
   };
-
   return (
     <div>
       <p className="Title">{props.Name}</p>
@@ -37,3 +36,4 @@ export default function Music(props) {
     </div>
   );
 }
+
