@@ -10,6 +10,7 @@ import MusicSearch from "./MusicSearch";
 import Games from "./Games";
 import MoviesSearch from "./MoviesSearch";
 import GamesSearch from "./GamesSearch";
+import Favorites from "./Favorites";
 
 export default function NavBar(props) {
   console.log(props.sessionToken)
@@ -54,6 +55,9 @@ export default function NavBar(props) {
         </Route>
         <Route exact path="/music">
           <MusicSearch sessionToken={props.sessionToken} />
+        </Route>
+        <Route exact path='/favorites'>
+          <Favorites sessionToken={props.sessionToken} />
         </Route>
       </Switch>
     </div>
