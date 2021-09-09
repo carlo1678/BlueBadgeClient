@@ -56,7 +56,6 @@ export default function NavBar(props) {
         <Route exact path="/music">
           <MusicSearch sessionToken={props.sessionToken} />
         </Route>
-        <Route exact path="/favorites">
           <Favorites sessionToken={props.sessionToken} />
         </Route>
       </Switch>
