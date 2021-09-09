@@ -2,29 +2,29 @@
   width: 100% !important;
 }
 
-.commerce{
+.commerce {
   font-size: 25px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-shadow: 2px 2px #14213D;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 2px 2px #14213d;
 }
 
 .navlinks {
   font-size: 20px;
   margin: 5%;
   padding: 2%;
-  color: #14213D;
+  color: #14213d;
 }
 
-.logoutButton{
+.logoutButton {
   font-size: 20px;
   margin: 5%;
   padding: 2%;
-  color: #14213D;
+  color: #14213d;
 }
 
-#logoutButton{
-  background-color:#14213D;
-  color: #E5E4E2;
+#logoutButton {
+  background-color: #14213d;
+  color: #e5e4e2;
 }
 
 h3 {
@@ -58,25 +58,25 @@ h3 {
   font-size: 20px;
   margin: 5%;
   padding: 2%;
-  color: #14213D;
+  color: #14213d;
 }
 
-body{
+body {
   padding: 5%;
-  background-color: #FCA311;
+  background-color: #fca311;
 }
 
-.websiteTitle{
+.websiteTitle {
   text-align: center;
-  color: #14213D;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #14213d;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 300%;
   font-weight: bold;
   text-shadow: 2px 2px #79787869;
   padding-bottom: 5%;
 }
 
-.author{
+.author {
   text-align: center;
   padding-top: 15%;
   font-size: 8px;
@@ -85,157 +85,157 @@ body{
 
 /* Login/Register pages */
 
-.registerAll{
-  background-color: #E5E4E2;
-  border: solid #14213D;
+.registerAll {
+  background-color: #e5e4e2;
+  border: solid #14213d;
   padding: 5%;
-  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2)
+  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2);
 }
 
-#registerAll{
+#registerAll {
   border-radius: 25px;
-  background: #E5E4E2;
+  background: #e5e4e2;
   width: 90%;
   height: 100%;
 }
 
-.register{
+.register {
   width: 60%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.loginAll{
-  background-color: #E5E4E2;
-  border: solid #14213D;
+.loginAll {
+  background-color: #e5e4e2;
+  border: solid #14213d;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 9%;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
-#loginAll{
+#loginAll {
   border-radius: 25px;
-  background: #E5E4E2;
+  background: #e5e4e2;
   width: 90%;
   height: 100%;
 }
 
-.loginHere{
+.loginHere {
   width: 60%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.mb-3{
+.mb-3 {
   width: 60%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.regButton{
-  background-color: #14213D;
+.regButton {
+  background-color: #14213d;
 }
 
-.loginButton{
-  background-color: #14213D;
+.loginButton {
+  background-color: #14213d;
 }
 
 /* Landing Page */
 
-.landingHello{
-  color: #14213D;
+.landingHello {
+  color: #14213d;
   padding-top: 10%;
   padding-left: 15%;
 }
 
-.landingWel{
-  color: #14213D;
+.landingWel {
+  color: #14213d;
   padding-left: 15%;
 }
 
 /* search */
 
-.searchHeading{
+.searchHeading {
   padding-top: 5%;
-  color: #14213D;
-  text-shadow: 2px 2px #79787869
+  color: #14213d;
+  text-shadow: 2px 2px #79787869;
 }
 
-.searchButton{
-  background-color: #14213D;
-  color: #E5E4E2;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.searchButton {
+  background-color: #14213d;
+  color: #e5e4e2;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 17px;
   margin-bottom: 10%;
 }
 
-.clearButton{
-  background-color: #14213D;
-  color: #E5E4E2;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 17px
+.clearButton {
+  background-color: #14213d;
+  color: #e5e4e2;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 17px;
 }
 
 /* Images populated */
 
-.movieCards{
+.movieCards {
   font-weight: bold;
   text-align: center;
 }
 
-.gameCards{
+.gameCards {
   font-weight: bold;
   text-align: center;
 }
 
-.musicCards{
+.musicCards {
   font-weight: bold;
   text-align: center;
 }
 
-.art{
+.art {
   width: 40%;
   height: auto;
   border-radius: 10%;
-  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2)
+  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2);
 }
 
-.image{
+.image {
   width: 40%;
   height: auto;
   border-radius: 10%;
-  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2)
+  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2);
 }
 
-.movieImg{
+.movieImg {
   border-radius: 10%;
-  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2)
+  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2);
 }
 
-.addToFavButton{
-  background-color: #14213D;
-  color: #E5E4E2;
+.addToFavButton {
+  background-color: #14213d;
+  color: #e5e4e2;
   text-align: center;
   margin-top: 1%;
-  box-shadow: 5px 5px 1px .5px rgba(41, 41, 41, 0.2)
-
+  box-shadow: 5px 5px 1px 0.5px rgba(41, 41, 41, 0.2);
 }
 
-.deleteButton{
-  background-color: #14213D;
-  color: #E5E4E2;
+.deleteButton {
+  background-color: #14213d;
+  color: #e5e4e2;
 }
 
-.gameFavButton{
-  background-color: #14213D;
-  color: #E5E4E2;
+.gameFavButton {
+  background-color: #14213d;
+  color: #e5e4e2;
 }
 
-.movieFavButton{
-  background-color: #14213D;
-  color: #E5E4E2;
+.movieFavButton {
+  background-color: #14213d;
+  color: #e5e4e2;
 }
 
-.musicFavButton{
-  background-color: #14213D;
-  color: #E5E4E2;
+.musicFavButton {
+  background-color: #14213d;
+  color: #e5e4e2;
 }
