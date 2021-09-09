@@ -38,7 +38,7 @@ export default function MusicSearch(props) {
         value={userInput}
         onChange={changeInput}
       ></input>
-      <button onClick={() => getMusic()}>Search</button>
+      <button onClick={() => getMusic()} className="searchButton">Search</button>
       <div className="musicCards">
         {songs.map((song) => (
           <Music

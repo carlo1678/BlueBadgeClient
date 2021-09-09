@@ -36,8 +36,8 @@ export default function Search(props) {
         value={userInput}
         onChange={changeInput}
       ></input>
-      <button onClick={() => getMovies()}>Search!</button>
-      <button onClick={resetForm}>Clear!</button>
+      <button onClick={() => getMovies()} className="searchButton">Search</button>
+      <button onClick={resetForm} className="clearButton">Clear</button>
       <div className="movieCards">
         {movies.map((movie) => (
           <Movies

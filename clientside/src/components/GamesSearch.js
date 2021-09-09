@@ -32,8 +32,8 @@ export default function GamesSearch(props) {
           value={userInput}
           onChange={changeInput}
         ></input>
-        <button onClick={() => getGames()}>Search</button>
-        <div className="musicCards">
+        <button onClick={() => getGames()} className="searchButton">Search</button>
+        <div className="gameCards">
           {games.map((game) => (
             <Games
               sessionToken={props.sessionToken}

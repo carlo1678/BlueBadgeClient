@@ -1,18 +1,37 @@
 .navbar-primary {
-  background-color: black !important;
+  width: 100% !important;
+}
+
+.commerce{
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 2px 2px #14213D;
 }
 
 .navlinks {
   font-size: 20px;
-  padding: 10px;
-  color: #00a8a8;
+  margin: 5%;
+  padding: 2%;
+  color: #14213D;
+}
+
+.logoutButton{
+  font-size: 20px;
+  margin: 5%;
+  padding: 2%;
+  color: #14213D;
+}
+
+#logoutButton{
+  background-color:#14213D;
+  color: #E5E4E2;
 }
 
 .favorites {
   font-size: 20px;
-  padding: 10px;
-  color: #00a8a8;
-  margin-left: 1200px;
+  margin: 5%;
+  padding: 2%;
+  color: #14213D;
 }
 
 body{
@@ -32,8 +51,12 @@ body{
 
 .author{
   text-align: center;
-  padding-top: 10%;
+  padding-top: 15%;
+  font-size: 8px;
+  font-weight: bold;
 }
+
+/* Login/Register pages */
 
 .registerAll{
   background-color: #E5E4E2;
@@ -87,4 +110,84 @@ body{
 
 .loginButton{
   background-color: #14213D;
+}
+
+/* Landing Page */
+
+.landingHello{
+  color: #14213D;
+  padding-top: 10%;
+  padding-left: 15%;
+}
+
+.landingWel{
+  color: #14213D;
+  padding-left: 15%;
+}
+
+/* search */
+
+.searchHeading{
+  padding-top: 5%;
+  color: #14213D;
+  text-shadow: 2px 2px #79787869
+}
+
+.searchButton{
+  background-color: #14213D;
+  color: #E5E4E2;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17px;
+  margin-bottom: 10%;
+}
+
+.clearButton{
+  background-color: #14213D;
+  color: #E5E4E2;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17px
+}
+
+/* Images populated */
+
+.movieCards{
+  font-weight: bold;
+  text-align: center;
+}
+
+.gameCards{
+  font-weight: bold;
+  text-align: center;
+}
+
+.musicCards{
+  font-weight: bold;
+  text-align: center;
+}
+
+.art{
+  width: 40%;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2)
+}
+
+.image{
+  width: 40%;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2)
+}
+
+.movieImg{
+  border-radius: 10%;
+  box-shadow: 12px 12px 2px 1px rgba(41, 41, 41, 0.2)
+}
+
+.addToFavButton{
+  background-color: #14213D;
+  color: #E5E4E2;
+  text-align: center;
+  margin-top: 1%;
+  box-shadow: 5px 5px 1px .5px rgba(41, 41, 41, 0.2)
 }

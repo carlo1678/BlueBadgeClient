@@ -32,7 +32,8 @@ export default function Music(props) {
     <div>
       <p className="Title">{props.Name}</p>
       <img src={props.Image} className="art" alt=""></img>
-      <button onClick={addToFavorites}>Add to Favorites!</button>
+      <br></br>
+      <button onClick={addToFavorites} className='addToFavButton'>Add to Favorites!</button>
     </div>
   );
 }
