@@ -190,4 +190,25 @@ body{
   text-align: center;
   margin-top: 1%;
   box-shadow: 5px 5px 1px .5px rgba(41, 41, 41, 0.2)
+
+}
+
+.deleteButton{
+  background-color: #14213D;
+  color: #E5E4E2;
+}
+
+.gameFavButton{
+  background-color: #14213D;
+  color: #E5E4E2;
+}
+
+.movieFavButton{
+  background-color: #14213D;
+  color: #E5E4E2;
+}
+
+.musicFavButton{
+  background-color: #14213D;
+  color: #E5E4E2;
 }
