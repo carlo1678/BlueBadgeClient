@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import APIURL from "../environment";
 
 export default function Movies(props) {
   let movieInfo = {
@@ -11,7 +12,7 @@ export default function Movies(props) {
 
   const addToFavorites = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/movies/add`, {
+    fetch(`${APIURL}/movies/add`, {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json",

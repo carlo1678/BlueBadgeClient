@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import APIURL from "../environment";
 
 export default function Favorites(props) {
     const [gameFavorites, setGameFavorites] = useState([]);
@@ -9,7 +10,7 @@ export default function Favorites(props) {
 
     const addGameFavorite = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3001/games/mine`, {
+        fetch(`${APIURL}/games/mine`, {
             method: "GET",
             headers: new Headers({
                 "Content-Type": "application/json",
@@ -29,7 +30,7 @@ export default function Favorites(props) {
     const deleteGameFavorite = (e, game) => {
         // e.preventDefault();
         console.log(game);
-        fetch(`http://localhost:3001/games/delete/${game.id}`, {
+        fetch(`${APIURL}/games/delete/${game.id}`, {
             method: "DELETE",
             headers: new Headers({
                 "Content-Type": "application/json",
@@ -47,7 +48,7 @@ export default function Favorites(props) {
 
     const addMovieFavorite = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3001/movies/mine`, {
+        fetch(`${APIURL}/movies/mine`, {
             method: "GET",
             headers: new Headers({
                 "Content-Type": "application/json",
@@ -66,7 +67,7 @@ export default function Favorites(props) {
 
     const addMusicFavorite = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3001/music/mine`, {
+        fetch(`${APIURL}/music/mine`, {
             method: "GET",
             headers: new Headers({
                 "Content-Type": "application/json",

@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import APIURL from "../environment";
 
 export default function Login(props) {
   const [userEmail, setUserEmail] = useState("");
@@ -25,7 +26,7 @@ export default function Login(props) {
 
   const userLogin = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/user/login`, {
+    fetch(`${APIURL}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

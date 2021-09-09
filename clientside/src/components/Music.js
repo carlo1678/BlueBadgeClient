@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import APIURL from "../environment";
 
 export default function Music(props) {
   let songInfo = {
@@ -11,7 +12,7 @@ export default function Music(props) {
 
   const addToFavorites = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/music/add`, {
+    fetch(`${APIURL}/music/add`, {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json",
