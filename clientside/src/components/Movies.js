@@ -10,13 +10,12 @@ export default function Movies(props) {
   };
 
   const addToFavorites = (e) => {
-    const accessToken = localStorage.getItem("SessionToken");
     e.preventDefault();
     fetch(`http://localhost:3001/movies/add`, {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
+        Authorization: `Bearer ${props.sessionToken}`,
       }),
       body: JSON.stringify(movieInfo),
     })

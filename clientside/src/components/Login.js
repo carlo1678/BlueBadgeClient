@@ -2,13 +2,11 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Login(props) {
   const [userEmail, setUserEmail] = useState("");
   const [userPass, setUserPass] = useState("");
-  const history = useHistory();
 
   const userEmailInput = (event) => {
     setUserEmail(event.target.value);
@@ -36,24 +34,18 @@ export default function Login() {
     })
       .then((response) => response.json())
       .then((data) => {
-        let token = data.sessionToken;
-        localStorage.setItem("SessionToken", token);
-        toast.success("Succesfully Registered!", {
-          position: toast.POSITION.TOP_CENTER,
-        });
-        history.push("/home");
+        props.updateToken(data.sessionToken);
+        // let token = data.sessionToken;
+        // localStorage.setItem("SessionToken", token);
       })
       .catch((err) => {
         console.error(err);
-        toast.error(err.message, {
-          position: toast.POSITION.TOP_CENTER,
-        });
       });
   };
 
   return (
-    <div>
-      <h1>Login Here!</h1>
+    <div className='loginAll' id='loginAll'>
+      <h1 className='loginHere'>Login Here!</h1>
       <Form onSubmit={userLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -74,13 +66,9 @@ export default function Login() {
             placeholder="Password"
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className='loginButton'>
           Submit
         </Button>
-        <p>Need to register?</p>
-        <Link to={"/Signup"}>
-          <Button variant="primary">Click Here!</Button>
-        </Link>
       </Form>
     </div>
   );
