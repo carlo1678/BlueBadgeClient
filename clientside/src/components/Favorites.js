@@ -1,14 +1,21 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import DisplayGameFavorites from "./DisplayGameFavorites";
+import DisplayMovieFavorites from "./DisplayMovieFavorites";
+import DisplayMusicFavorites from "./DisplayMusicFavorites";
 
 export default function Favorites(props) {
   const [gameFavorites, setGameFavorites] = useState([]);
   const [movieFavorites, setMovieFavorites] = useState([]);
-  const [songFavorites, setSongFavorites] = useState([]);
+  const [songsFavorites, setSongFavorites] = useState([]);
+  useEffect(() => {
+    addGameFavorite();
+    addMovieFavorite();
+    addMusicFavorite();
+  }, []);
 
-  const addGameFavorite = (e) => {
-    e.preventDefault();
+  const addGameFavorite = () => {
     fetch(`http://localhost:3001/games/mine`, {
       method: "GET",
       headers: new Headers({
@@ -26,8 +33,7 @@ export default function Favorites(props) {
       });
   };
 
-  const deleteGameFavorite = (e, game) => {
-    // e.preventDefault();
+  const deleteGameFavorite = (game) => {
     console.log(game);
     fetch(`http://localhost:3001/games/delete/${game.id}`, {
       method: "DELETE",
@@ -45,8 +51,7 @@ export default function Favorites(props) {
       });
   };
 
-  const addMovieFavorite = (e) => {
-    e.preventDefault();
+  const addMovieFavorite = () => {
     fetch(`http://localhost:3001/movies/mine`, {
       method: "GET",
       headers: new Headers({
@@ -64,8 +69,7 @@ export default function Favorites(props) {
       });
   };
 
-  const addMusicFavorite = (e) => {
-    e.preventDefault();
+  const addMusicFavorite = () => {
     fetch(`http://localhost:3001/music/mine`, {
       method: "GET",
       headers: new Headers({
@@ -84,7 +88,28 @@ export default function Favorites(props) {
 
   return (
     <div>
-      <p>Click here to grab your favorite Games!</p>
+      {gameFavorites.map((game) => (
+        <DisplayGameFavorites
+          sessionToken={props.sessionToken}
+          game={game}
+          addGameFavorite={addGameFavorite}
+        />
+      ))}
+      {movieFavorites.map((movie) => (
+        <DisplayMovieFavorites
+          sessionToken={props.sessionToken}
+          movie={movie}
+          addMovieFavorite={addMovieFavorite}
+        />
+      ))}
+      {songsFavorites.map((song) => (
+        <DisplayMusicFavorites
+          sessionToken={props.sessionToken}
+          song={song}
+          addMusicFavorite={addMusicFavorite}
+        />
+      ))}
+      {/* <p>Click here to grab your favorite Games!</p>
       <button onClick={addGameFavorite}>Click Me!</button>
       {gameFavorites.map((game) => {
         return (
@@ -118,7 +143,7 @@ export default function Favorites(props) {
             <img src={song.image}></img>
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 }

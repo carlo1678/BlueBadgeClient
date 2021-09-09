@@ -13,7 +13,6 @@ import GamesSearch from "./GamesSearch";
 import Favorites from "./Favorites";
 
 export default function NavBar(props) {
-  console.log(props.sessionToken)
   return (
     <div>
       <Navbar className="navbar-primary" variant="dark">
@@ -37,7 +36,11 @@ export default function NavBar(props) {
             Favorites
           </Link>
           {props.sessionToken && (
-            <button onClick={props.clearToken} className="logoutButton" id='logoutButton'>
+            <button
+              onClick={props.clearToken}
+              className="logoutButton"
+              id="logoutButton"
+            >
               Logout
             </button>
           )}
@@ -56,6 +59,7 @@ export default function NavBar(props) {
         <Route exact path="/music">
           <MusicSearch sessionToken={props.sessionToken} />
         </Route>
+        <Route>
           <Favorites sessionToken={props.sessionToken} />
         </Route>
       </Switch>
