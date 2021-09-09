@@ -38,6 +38,7 @@ export default function Signup(props) {
 
   return (
     <div className='registerAll' id='registerAll'>
+      <h1 class="websiteTitle">Choice Media</h1>
       <h1 className='register'>Register here!</h1>
       <Form onSubmit={userSignUp} >
         <Form.Group className="mb-3" controlId="formBasicEmail">

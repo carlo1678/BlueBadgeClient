@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 export default function Games(props) {
   let gameInfo = {
     game: {
-      image: props.image,
-      name: props.name,
+      image: props.Image,
+      name: props.Name,
     },
   };
 
@@ -32,7 +32,8 @@ export default function Games(props) {
     <div>
       <p className="title">{props.Name}</p>
       <img className="image" src={props.Image} alt=""></img>
-      <button onClick={addToFavorites}>Add to Favorites!!</button>
+      <br></br>
+      <button onClick={addToFavorites} className='addToFavButton'>Add to Favorites!!</button>
     </div>
   );
 }

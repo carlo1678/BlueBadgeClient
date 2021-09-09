@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// import React from "react";
-=======
 import { response } from "express";
-=======
->>>>>>> 01fdadcccaf717f7d3d03716fd5c61fdbe3fbc0c
+
 import React from "react";
 import { useState, useEffect } from "react";
->>>>>>> 72eb737c5a77e8e5417a807c91581c894d3b52ab
 
-<<<<<<< HEAD
+
+
 
 // fetch(`https://shazam.p.rapidapi.com/search?term=${userInput}&locale=en-US&offset=0`, {
 //   "method": "GET",
@@ -28,14 +23,13 @@ import { useState, useEffect } from "react";
 //     console.error(err);
 //   });
 
-<<<<<<< HEAD
+
 // export default function Music(props) {
 //   return <div>
 //     <p className="Title">{props.Title}</p>
 //   </div>;
-=======
-=======
->>>>>>> 01fdadcccaf717f7d3d03716fd5c61fdbe3fbc0c
+
+
 export default function Music(props) {
   let songInfo = {
     music: {
@@ -63,14 +57,14 @@ export default function Music(props) {
         console.error(err);
       });
   };
-<<<<<<< HEAD
+
 
   return <div>
     <p className="Title">{props.Title}</p>
     <p className="art">{props.art}</p>
     <button onClick={addToFavorites}>Add to Favorites!</button>
   </div>;
->>>>>>> 72eb737c5a77e8e5417a807c91581c894d3b52ab
+
 
 // export default function Music() {
 //   return (
@@ -80,14 +74,15 @@ export default function Music(props) {
 //   );
 
 // }
-=======
+
   return (
     <div>
       <p className="Title">{props.Name}</p>
       <img src={props.Image} className="art" alt=""></img>
-      <button onClick={addToFavorites}>Add to Favorites!</button>
+      <br></br>
+      <button onClick={addToFavorites} className='addToFavButton'>Add to Favorites!</button>
     </div>
   );
 }
 
->>>>>>> 01fdadcccaf717f7d3d03716fd5c61fdbe3fbc0c
+
