@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import APIURL from "../environment";
 
 export default function Games(props) {
   let gameInfo = {
@@ -11,7 +12,7 @@ export default function Games(props) {
 
   const addToFavorites = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/games/add`, {
+    fetch(`${APIURL}/games/add`, {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json",

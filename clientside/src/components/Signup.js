@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import APIURL from "../environment";
 
 export default function Signup(props) {
   const [userEmail, setUserEmail] = useState("");
@@ -20,7 +21,7 @@ export default function Signup(props) {
 
   const userSignUp = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/user/register`, {
+    fetch(`${APIURL}/user/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
