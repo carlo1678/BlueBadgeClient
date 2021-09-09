@@ -1,5 +1,12 @@
 .navbar-primary {
-  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-right: 500px;
+}
+
+.mainNav {
+  display: flex !important;
+  justify-content: center !important;
 }
 
 .commerce {
@@ -54,6 +61,20 @@ body {
   padding-top: 15%;
   font-size: 8px;
   font-weight: bold;
+}
+
+/* Landing Page */
+
+.landingPage {
+  display: flex;
+  justify-content: center;
+}
+
+.moviesPic,
+.musicPic,
+.gamesPic {
+  width: 600px;
+  height: 500px;
 }
 
 /* Login/Register pages */
@@ -115,14 +136,16 @@ body {
 /* Landing Page */
 
 .landingHello {
+  display: flex;
+  justify-content: center;
   color: #14213d;
   padding-top: 10%;
-  padding-left: 15%;
 }
 
 .landingWel {
+  display: flex;
+  justify-content: center;
   color: #14213d;
-  padding-left: 15%;
 }
 
 /* search */
