@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 export default function Games(props) {
   let gameInfo = {
     game: {
-      image: props.image,
-      name: props.name,
+      image: props.Image,
+      name: props.Name,
     },
   };
 
