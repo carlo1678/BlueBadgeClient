@@ -85,12 +85,12 @@ export default function Favorites(props) {
     return (
         <div>
             <p>Click here to grab your favorite Games!</p>
-            <button onClick={addGameFavorite}>Click Me!</button>
+            <button onClick={addGameFavorite} className="gameFavButton">Click Me!</button>
             {gameFavorites.map((game) => {
                 return (
                     <div>
                         <p>{game.name}</p>
-                        <img src={game.image} alt="" />
+                        <img src={game.image} alt="" className="gameFavImg" />
                         <button onClick={() => deleteGameFavorite(game)} className='deleteButton'>
                             Click here to delete this from your favorites!
                         </button>
@@ -98,7 +98,7 @@ export default function Favorites(props) {
                 );
             })}
             <p>Click here to grab your favorite Movies!</p>
-            <button onClick={addMovieFavorite}>Click Me!</button>
+            <button onClick={addMovieFavorite} className='movieFavButton'>Click Me!</button>
             {movieFavorites.map((movie) => {
                 console.log(movie);
                 return (
@@ -109,13 +109,13 @@ export default function Favorites(props) {
                 );
             })}
             <p>Click here to grab your favorite Songs!</p>
-            <button onClick={addMusicFavorite}>Click Me!</button>
+            <button onClick={addMusicFavorite} className='musicFavButton'>Click Me!</button>
             {songFavorites.map((song) => {
                 console.log(song);
                 return (
                     <div>
                         <p>{song.name}</p>
-                        <img src={song.image}></img>
+                        <img src={song.image} className='musicFavImg'></img>
                     </div>
                 );
             })}
