@@ -32,8 +32,9 @@ export default function Movies(props) {
     <div>
       <p className="title">{props.Title}</p>
       <p className="year">{props.Year}</p>
-      <img src={props.Poster} alt=""></img>
-      <button onClick={addToFavorites}>Add to Favorites!</button>
+      <img className='movieImg' src={props.Poster} alt=""></img>
+      <br></br>
+      <button onClick={addToFavorites} className='addToFavButton'>Add to Favorites!</button>
     </div>
   );
 }
